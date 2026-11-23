@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Post</title>
+    <style>
+        /* Google Fonts se "Playball" handwriting font load kar rahe hain */
+        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a1a;
+            font-family: sans-serif;
+        }
+
+        /* Image aur overlay text ka main container */
+        .card-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px; /* Mobile visual size */
+            aspect-ratio: 2 / 3;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Background picture */
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Text overlay container (Top Left corner mein set kiya hai) */
+        .text-overlay {
+            position: absolute;
+            top: 25px;
+            left: 20px;
+            right: 20px; /* Safe space to prevent clipping on right */
+            pointer-events: none; /* User clicking background is easy */
+        }
+
+        /* Script/Handwritten styling, bold shadow aur design */
+        .aesthetic-text {
+            font-family: 'Playball', cursive;
+            font-size: clamp(24px, 6vw, 32px); /* Responsive sizing */
+            color: #ffffff;
+            line-height: 1.25;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+            /* Same glow and shadow jo edits mein dikhaya */
+            text-shadow: 
+                2px 2px 4px rgba(0, 0, 0, 0.6),
+                -1px -1px 4px rgba(0, 0, 0, 0.6),
+                1px -1px 4px rgba(0, 0, 0, 0.6),
+                -1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Sparkle emoji style adjustment */
+        .sparkle {
+            display: inline-block;
+            font-size: 0.9em;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- Apni saved image ka path yahan daalein -->
+        <img class="card-image" src="image.jpg" alt="Aesthetic Girl Golden Hour">
+        
+        <!-- Opar corner ka likha hua text -->
+        <div class="text-overlay">
+            <div class="aesthetic-text">
+                Kon he karega mery leya <br>
+                ye trend pora?<span class="sparkle">✨</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+  </html>
+  
